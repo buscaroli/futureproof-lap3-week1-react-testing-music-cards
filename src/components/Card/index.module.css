@@ -1,0 +1,96 @@
+.card {
+ 
+  height: 300px;
+  border: 2px solid darkslategray;
+  margin-top: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+}
+
+.sphere {
+  position: absolute;
+  top: 30px;
+  left: 45%;
+  height: 100px;
+  width: 100px;
+  border: 2px solid darkslategray;
+  border-radius: 100%;
+  background-color: snow;
+  color: darkslategray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.topWrapper{
+  height: 80px;
+  background-color: darkslategray;
+  color: lightcyan;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editBtn, .deleteBtn {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 2px solid darkslategray;
+  border-radius: 100%;
+}
+
+.editBtn {
+  background-color: yellow;
+}
+
+.deleteBtn {
+background-color: red;
+}
+
+.bottomWrapper {
+  height: 220px;
+  background-color: lightskyblue;
+  color: darkslategrey;
+
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr);
+  grid-gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.title, .link, .singer, .stars {
+  
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.link {
+  padding: 10px 30px;
+  border: 2px solid darkslategray;
+}
+
+.singer {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.stars {
+  font-size: 2.5rem;
+}
+.left {
+  grid-column: 1/2;
+}
+
+.right {
+  grid-column: 2/3;
+}
