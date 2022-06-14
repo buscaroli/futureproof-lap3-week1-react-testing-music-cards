@@ -1,6 +1,6 @@
 .appWrapper {
-  max-width: 800px;
-  height: 100vh;
+  max-width: 600px;
+  min-height: 100vh;
   /* background-color: bisque; */
   margin: 0 auto;
 
