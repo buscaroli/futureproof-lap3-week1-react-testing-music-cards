@@ -1,13 +1,25 @@
 import React from 'react'
 import styles from './index.module.css'
 
-function Card({ title, singer, genre, link, stars }) {
+function Card({ id, title, singer, genre, link, stars, onDelSong }) {
+  const onDeleteBtnClick = (e) => {
+    e.preventDefault()
+    // console.log('id ', id)
+    // console.log('title', title)
+    onDelSong(id)
+  }
+
   return (
     <div role="comment" className={styles.card}>
       <div className={styles.sphere}>{genre}</div>
       <div className={styles.topWrapper}>
-        <div className={styles.editBtn}></div>
-        <div className={styles.deleteBtn}></div>
+        <div
+          role="button"
+          onClick={onDeleteBtnClick}
+          className={styles.deleteBtn}
+        >
+          X
+        </div>
       </div>
       <div className={styles.bottomWrapper}>
         <div className={`${styles.title} ${styles.left}`}>{title}</div>

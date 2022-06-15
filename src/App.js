@@ -62,11 +62,16 @@ function App() {
     setSongs((prev) => [...prev, data])
   }
 
+  const onDeleteSong = (id) => {
+    const newArr = songs.filter((song) => song.id !== id)
+    setSongs(newArr)
+  }
+
   return (
     <div className={styles.appWrapper}>
       <Title />
       <Form onSongSubmit={onDataSubmit} />
-      <List songList={songs} />
+      <List songList={songs} onDelSong={onDeleteSong} />
     </div>
   )
 }

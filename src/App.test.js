@@ -42,4 +42,17 @@ describe('App', () => {
     const cardNumberAfter = screen.getAllByRole('comment')
     expect(cardNumberAfter.length).toBe(7)
   })
+
+  it('tests a card can be removed', () => {
+    const cardNumber = screen.getAllByRole('comment')
+    expect(cardNumber.length).toBe(6)
+
+    const cardDeleteBtn = screen.getAllByRole('button', {
+      name: 'X',
+    })
+    userEvent.click(cardDeleteBtn[0])
+
+    const cardNumberAfter = screen.getAllByRole('comment')
+    expect(cardNumberAfter.length).toBe(5)
+  })
 })

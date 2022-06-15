@@ -37,21 +37,22 @@
   justify-content: flex-end;
 }
 
-.editBtn, .deleteBtn {
+.deleteBtn {
   width: 40px;
   height: 40px;
   margin: 5px;
   border: 2px solid darkslategray;
   border-radius: 100%;
+  background-color: red;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: bisque;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.editBtn {
-  background-color: yellow;
-}
 
-.deleteBtn {
-background-color: red;
-}
 
 .bottomWrapper {
   height: 220px;

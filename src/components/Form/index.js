@@ -33,7 +33,6 @@ function Form({ onSongSubmit }) {
   const onFormSubmit = (e) => {
     e.preventDefault()
 
-    console.log('submitted')
     const data = {
       id: v4(),
       title,
