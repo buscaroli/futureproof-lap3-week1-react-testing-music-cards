@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './index.module.css'
 
-function Card({ id, title, singer, genre, link, stars }) {
+function Card({ title, singer, genre, link, stars }) {
   return (
-    <div key={id} className={styles.card}>
+    <div className={styles.card}>
       <div className={styles.sphere}>{genre}</div>
       <div className={styles.topWrapper}>
         <div className={styles.editBtn}></div>
