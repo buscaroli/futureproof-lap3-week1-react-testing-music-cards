@@ -52,9 +52,13 @@ function Form({ onSongSubmit }) {
   return (
     <form onSubmit={onFormSubmit} className={styles.form}>
       <div className={`${styles.inputWrapper} ${styles.left}`}>
-        <label className={styles.label}>Title</label>
+        <label htmlFor="titleInput" className={styles.label}>
+          Title
+        </label>
         <input
           onChange={onTitleChange}
+          id="titleInput"
+          name="titleInput"
           type="text"
           className={styles.input}
           value={title}
@@ -62,30 +66,47 @@ function Form({ onSongSubmit }) {
       </div>
 
       <div className={`${styles.inputWrapper} ${styles.right}`}>
-        <label className={styles.label}>Genre</label>
+        <label htmlFor="genreInput" className={styles.label}>
+          Genre
+        </label>
         <input
           onChange={onGenreChange}
+          id="genreInput"
+          name="genreInput"
           className={styles.input}
           value={genre}
         />
       </div>
 
       <div className={`${styles.inputWrapper} ${styles.left}`}>
-        <label className={styles.label}>Singer</label>
+        <label htmlFor="singerInput" className={styles.label}>
+          Singer
+        </label>
         <input
           onChange={onSingerChange}
+          id="singerInput"
+          name="singerInput"
           className={styles.input}
           value={singer}
         />
       </div>
 
       <div className={`${styles.inputWrapper} ${styles.right}`}>
-        <label className={styles.label}>Link</label>
-        <input onChange={onLinkChange} className={styles.input} value={link} />
+        <label htmlFor="linkInput" className={styles.label}>
+          Link
+        </label>
+        <input
+          onChange={onLinkChange}
+          id="linkInput"
+          name="linkInput"
+          className={styles.input}
+          value={link}
+        />
       </div>
 
       <input
         type="submit"
+        id="sumbitBtn"
         className={`${styles.btn} ${styles.fullWidth}`}
         value="Add"
       />

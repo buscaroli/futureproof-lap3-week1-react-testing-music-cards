@@ -3,7 +3,7 @@ import styles from './index.module.css'
 
 function Card({ title, singer, genre, link, stars }) {
   return (
-    <div className={styles.card}>
+    <div role="comment" className={styles.card}>
       <div className={styles.sphere}>{genre}</div>
       <div className={styles.topWrapper}>
         <div className={styles.editBtn}></div>
