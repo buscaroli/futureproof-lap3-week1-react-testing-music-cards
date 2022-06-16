@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: bisque;
+  min-height: 75vh;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.intro {
+  font-size: 2.8rem;
+  color: darkslategray;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 3px;
+  
+}
+
+.span {
+  
+}
+
+.description {
+  font-size: 1.5rem;
+  letter-spacing: 1.6px;
+  line-height: 2rem;
+  
+}
+
+.description::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: darkslategray;
+  
+}
