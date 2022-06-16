@@ -24,7 +24,7 @@ function Card({ id, title, singer, genre, link, stars, onDelSong }) {
       <div className={styles.bottomWrapper}>
         <div className={`${styles.title} ${styles.left}`}>{title}</div>
         <div className={`${styles.link} ${styles.right}`}>
-          <a href={`http://${link}`} target="_blank">
+          <a href={`${link}`} target="_blank" rel="noreferrer">
             Open Link
           </a>
         </div>
