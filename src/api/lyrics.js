@@ -5,7 +5,7 @@ export async function getLyric(title, singer = '') {
 
   try {
     const { data } = await axios(url)
-
+    console.log('axios response: ', data.lyrics)
     return data.lyrics
   } catch (err) {
     console.log('Error: ', err)
