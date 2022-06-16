@@ -1,0 +1,56 @@
+.wrapper {
+  min-height: 80vh;
+  background-color: bisque;
+  border-radius: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  border: 2px solid darkslategray;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: bisque;
+  margin-top: 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.label {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.input {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.lyric {
+  text-align: center;
+
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  line-height: 1.8rem;
+  color: #333;
+
+  margin-top: 20px;
+  padding: 10px;
+  
+}
+
+.lyric::first-letter {
+  font-size: 2.5rem;
+  color: darkslategray
+}
