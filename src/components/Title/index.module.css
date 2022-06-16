@@ -1,9 +1,50 @@
-.title {
-  height: 100px;
-  color: lightcyan;
-  background-color: darkslategrey;
-  font-size: 4rem;
-  text-align: center;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  background-color: darkslategray;
   padding: 10px;
   border-radius: 20px;
+  /* border: 2px solid black; */
+  margin-bottom: 20px;
+}
+
+.title {
+  height: 30px;
+  color: bisque;
+  
+  
+  font-size: 4rem;
+  text-align: center;
+  
+}
+
+.navbar {
+  
+  
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 20px;
+  font-size: 1.3rem;
+  
+}
+
+li {
+  list-style: none;
+  
+}
+
+.link {
+  text-decoration: none;
+  color: bisque;
+}
+
+.link:visited, .link:active, .link:link {
+  text-decoration: none;
 }
