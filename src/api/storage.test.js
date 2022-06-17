@@ -3,6 +3,7 @@
 
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { MemoryRouter } from 'react-router-dom'
 import App from '../App'
 
 import { loadSongs, storeSongs } from './storage'
@@ -19,7 +20,7 @@ describe('App', () => {
 
   beforeEach(() => {
     mockSongs = {}
-    render(<App />)
+    render(<App />, { wrapper: MemoryRouter })
   })
 
   afterAll(() => {
