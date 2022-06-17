@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { BackButton } from '../'
 import styles from './index.module.css'
 
 function Title() {
@@ -37,6 +38,9 @@ function Title() {
             >
               Surf
             </NavLink>
+          </li>
+          <li>
+            <BackButton />
           </li>
         </ul>
       </nav>
