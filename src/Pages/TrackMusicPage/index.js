@@ -5,9 +5,9 @@ import { loadSongs, storeSongs } from '../../api/storage'
 function TrackMusicPage() {
   const [songs, setSongs] = useState(loadSongs())
 
-  useEffect(() => {
-    loadSongs()
-  }, [])
+  // useEffect(() => {
+  //   loadSongs()
+  // }, [])
 
   useEffect(() => {
     storeSongs(songs)
@@ -20,6 +20,7 @@ function TrackMusicPage() {
   const onDeleteSong = (id) => {
     const newArr = songs.filter((song) => song.id !== id)
     setSongs(newArr)
+    storeSongs(songs)
   }
 
   const onRatingSong = (sng) => {
@@ -29,6 +30,7 @@ function TrackMusicPage() {
       }
       return song
     })
+
     setSongs(newArr)
   }
 
