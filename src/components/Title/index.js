@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { BackButton } from '../'
 import styles from './index.module.css'
 
 function Title() {
@@ -9,19 +10,37 @@ function Title() {
       <nav className={styles.navbar}>
         <ul>
           <li>
-            <Link className={styles.link} to="/">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : `${styles.link}`
+              }
+              to="/"
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className={styles.link} to="/track">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : `${styles.link}`
+              }
+              to="/track"
+            >
               Track
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className={styles.link} to="/get">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : `${styles.link}`
+              }
+              to="/get"
+            >
               Surf
-            </Link>
+            </NavLink>
+          </li>
+          <li>
+            <BackButton />
           </li>
         </ul>
       </nav>

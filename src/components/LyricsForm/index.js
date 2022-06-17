@@ -12,6 +12,7 @@ function LyricsForm() {
     'Enter something',
     'In the fields above!',
   ])
+  const [loading, setLoading] = useState(false)
 
   // useEffect(() => {
   //   const fetchText = async () => {
@@ -30,7 +31,7 @@ function LyricsForm() {
 
   useEffect(() => {
     console.log('page reloaded as lyric changed')
-  }, [lyric])
+  }, [lyric, loading])
 
   const onTitleChange = (e) => {
     e.preventDefault()
@@ -46,12 +47,25 @@ function LyricsForm() {
   const onFormSubmit = async (e) => {
     e.preventDefault()
 
-    const songText = await getLyric(title, singer)
+    try {
+      setLoading(true)
+      const songText = await getLyric(title, singer)
+
+      const lyricArray = songText.split('\n')
+      // console.log('array ', lyricArray)
+      setLyric(lyricArray)
+    } catch (err) {
+      setLoading(false)
+      setLyric([
+        'Could not get',
+        'your Song, Sorry!',
+        'Try a different one',
+        'or maybe try again later!',
+      ])
+    }
     setTitle('')
     setSinger('')
-    const lyricArray = songText.split('\n')
-    // console.log('array ', lyricArray)
-    setLyric(lyricArray)
+    setLoading(false)
   }
 
   return (
@@ -92,7 +106,9 @@ function LyricsForm() {
         />
       </form>
       <section className={styles.lyric}>
-        {lyric.length > 0 ? lyric.map((line) => <p>{line}</p>) : 'Waiting ...'}
+        {loading && lyric.length > 0
+          ? 'Loading...'
+          : lyric.map((line, index) => <p key={index}>{line}</p>)}
       </section>
     </div>
   )

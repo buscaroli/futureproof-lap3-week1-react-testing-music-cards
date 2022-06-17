@@ -1,13 +1,58 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './index.module.css'
 
-function Card({ id, title, singer, genre, link, stars, onDelSong }) {
+function Card({
+  id,
+  title,
+  singer,
+  genre,
+  link,
+  stars,
+  onDelSong,
+  onRatingSong,
+}) {
+  const [rating, setRating] = useState(stars)
+
   const onDeleteBtnClick = (e) => {
     e.preventDefault()
     // console.log('id ', id)
     // console.log('title', title)
     onDelSong(id)
   }
+
+  const cycleRating = (n) => (n >= 4 ? 0 : ++n)
+
+  const onRatingClick = (e) => {
+    e.preventDefault()
+
+    const updatedRating = cycleRating(rating)
+    console.log('updatedRating ', updatedRating)
+    setRating(updatedRating)
+    console.log('Card returning: ', { id, rating })
+
+    onRatingSong({
+      id,
+      title,
+      singer,
+      genre,
+      link,
+      stars: rating,
+      onDelSong,
+      onRatingSong,
+    })
+  }
+
+  const ratingDict = {
+    0: '😱',
+    1: '🤢',
+    2: '😴',
+    3: '🥳',
+    4: '🤩',
+  }
+
+  // useEffect(() => {
+  //   console.log('Updating rating')
+  // }, [])
 
   return (
     <div role="comment" className={styles.card}>
@@ -25,11 +70,16 @@ function Card({ id, title, singer, genre, link, stars, onDelSong }) {
         <div className={`${styles.title} ${styles.left}`}>{title}</div>
         <div className={`${styles.link} ${styles.right}`}>
           <a href={`${link}`} target="_blank" rel="noreferrer">
-            Open Link
+            {link ? 'Open Link' : ''}
           </a>
         </div>
         <div className={`${styles.singer} ${styles.left}`}>{singer}</div>
-        <div className={`${styles.stars} ${styles.right}`}>{stars}</div>
+        <div
+          onClick={onRatingClick}
+          className={`${styles.stars} ${styles.right}`}
+        >
+          {ratingDict[rating] ? ratingDict[rating] : '❓'}
+        </div>
       </div>
     </div>
   )
