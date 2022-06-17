@@ -22,10 +22,24 @@ function TrackMusicPage() {
     setSongs(newArr)
   }
 
+  const onRatingSong = (sng) => {
+    const newArr = songs.map((song) => {
+      if (song.id === sng.id) {
+        return sng
+      }
+      return song
+    })
+    setSongs(newArr)
+  }
+
   return (
     <>
       <Form onSongSubmit={onDataSubmit} />
-      <List songList={songs} onDelSong={onDeleteSong} />
+      <List
+        songList={songs}
+        onDelSong={onDeleteSong}
+        onRatingSong={onRatingSong}
+      />
     </>
   )
 }

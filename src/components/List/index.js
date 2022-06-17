@@ -1,7 +1,8 @@
 import styles from './index.module.css'
 import Card from '../Card'
 
-function List({ songList, onDelSong }) {
+function List({ songList, onDelSong, onRatingSong }) {
+  console.log('List songList -> ', songList)
   const renderedSongs = songList.map((song) => (
     <Card
       key={song.id}
@@ -12,6 +13,7 @@ function List({ songList, onDelSong }) {
       stars={song.stars}
       genre={song.genre}
       onDelSong={onDelSong}
+      onRatingSong={onRatingSong}
     />
   ))
 

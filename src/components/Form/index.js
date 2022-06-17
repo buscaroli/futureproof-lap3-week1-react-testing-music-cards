@@ -39,6 +39,7 @@ function Form({ onSongSubmit }) {
       singer,
       genre,
       link,
+      stars: 5,
     }
     setTitle('')
     setSinger('')

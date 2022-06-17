@@ -10,9 +10,13 @@
   grid-gap: 15px;
   border: 2px solid darkslategray;
   border-radius: 20px;
+  border-bottom: 2px solid gray;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 15px;
   background-color: bisque;
   margin-top: 20px;
+  padding-bottom: 30px;
 }
 
 .inputWrapper {
