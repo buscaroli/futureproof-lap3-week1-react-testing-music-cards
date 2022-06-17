@@ -15,8 +15,7 @@ function Card({
 
   const onDeleteBtnClick = (e) => {
     e.preventDefault()
-    // console.log('id ', id)
-    // console.log('title', title)
+
     onDelSong(id)
   }
 
@@ -26,9 +25,8 @@ function Card({
     e.preventDefault()
 
     const updatedRating = cycleRating(rating)
-    console.log('updatedRating ', updatedRating)
+
     setRating(updatedRating)
-    console.log('Card returning: ', { id, rating })
 
     onRatingSong({
       id,
@@ -36,7 +34,7 @@ function Card({
       singer,
       genre,
       link,
-      stars: rating,
+      stars: updatedRating,
       onDelSong,
       onRatingSong,
     })

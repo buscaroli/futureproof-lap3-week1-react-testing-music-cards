@@ -6,7 +6,7 @@ function BackButton() {
   const goTo = useNavigate()
 
   return (
-    <button class={styles.btn} id="back-button" onClick={() => goTo(-1)}>
+    <button className={styles.btn} id="back-button" onClick={() => goTo(-1)}>
       Back
     </button>
   )
