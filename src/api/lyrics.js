@@ -9,6 +9,5 @@ export async function getLyric(title, singer = '') {
     return data.lyrics
   } catch (err) {
     console.log('Error: ', err)
-    throw new Error(err)
   }
 }

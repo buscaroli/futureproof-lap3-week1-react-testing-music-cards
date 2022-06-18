@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
-import Title from './'
+import Title from '../../components/Title'
 
 describe('Title', () => {
   beforeEach(() => {
