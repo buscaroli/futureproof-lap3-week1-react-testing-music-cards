@@ -6,7 +6,7 @@ React App that allows the user to track interesting music/video clips and to fet
 
 To learn to use React during the Futureproof Bootcamp - Auguste Cohort.
 
-![image]('assets/MuzicList.png')
+![image](assets/MuzicList.png)
 
 ## How to use
 
