@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
-import BackButton from './'
+import BackButton from '../../components/BackButton'
 
 describe('BackButton', () => {
   beforeEach(() => {
@@ -16,13 +16,5 @@ describe('BackButton', () => {
   it('tests the button renders with the correct text', () => {
     const btn = screen.getByRole('button')
     expect(btn.textContent).toContain('Back')
-  })
-
-  it('tests the button can be clicked', () => {
-    const btn = screen.getByRole('button')
-
-    userEvent.click(btn)
-
-    expect(btn).toBeCalled()
   })
 })

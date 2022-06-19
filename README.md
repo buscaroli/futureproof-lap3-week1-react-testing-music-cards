@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Muzic Box 🎺
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React App that allows the user to track interesting music/video clips and to fetch songs lyrics.
 
-## Available Scripts
+## Why this App
 
-In the project directory, you can run:
+To learn to use React during the Futureproof Bootcamp - Auguste Cohort.
 
-### `npm start`
+![image]('assets/MuzicList.png')
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to use
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app has been deployed on Netlify at [this address](https://muzic-list.netlify.app/).
 
-### `npm test`
+### Run 🏃
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the app locally, clone the repo and use the following command from the root folder:
 
-### `npm run build`
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Test 🧪
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To test the app, clone the repo and use one of the following commands from the root folder:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run test
 
-### `npm run eject`
+npm run coverage
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies 📡
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React (JS library to build UI)
+- React Hooks:
+  - useState (to work with each components' state)
+  - useEffect (to mimic life-cycle events)
+  - useNavigate (to harness the Browser's history object to navigate back to the previous page)
+- React-router (to have multiple page in a single-page app)
+- CSS-modules (for organised styling)
+- Jest (as a test runner)
+- React testing library (RTL - for the tests)
+- Axios (to make fetch requests, smarter than fetch and isomorphic (can be used FE and BE))
+- UUID (npm package used to generate uuids, Universally Unique Identifiers)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Challenges
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Testing (struggle to use mocks with Jest)

@@ -2,7 +2,6 @@ import styles from './index.module.css'
 import Card from '../Card'
 
 function List({ songList, onDelSong, onRatingSong }) {
-  console.log('List songList -> ', songList)
   const renderedSongs = songList.map((song) => (
     <Card
       key={song.id}

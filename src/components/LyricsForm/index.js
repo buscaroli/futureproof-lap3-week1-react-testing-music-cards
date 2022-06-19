@@ -8,29 +8,14 @@ function LyricsForm() {
   const [singer, setSinger] = useState('')
   const [lyric, setLyric] = useState([
     'No Lyrics',
-    'Selected Yet',
+    'Searched yet',
     'Enter something',
     'In the fields above!',
   ])
   const [loading, setLoading] = useState(false)
 
-  // useEffect(() => {
-  //   const fetchText = async () => {
-  //     console.log('inside useEffect')
-  //     try {
-  //       const text = await getLyric('Sweet Child o Mine', 'Guns and Roses')
-  //       const lyricArray = text.split('\n')
-  //       console.log('array ', lyricArray)
-  //       setLyric(lyricArray)
-  //     } catch (err) {
-  //       console.warn('Error fetching lyric: ', err)
-  //     }
-  //   }
-  //   fetchText()
-  // }, [])
-
   useEffect(() => {
-    console.log('page reloaded as lyric changed')
+    // console.log('page reloaded as lyric changed')
   }, [lyric, loading])
 
   const onTitleChange = (e) => {
@@ -105,7 +90,7 @@ function LyricsForm() {
           value="Lyric Text"
         />
       </form>
-      <section className={styles.lyric}>
+      <section data-testid="lyric" className={styles.lyric}>
         {loading && lyric.length > 0
           ? 'Loading...'
           : lyric.map((line, index) => <p key={index}>{line}</p>)}
