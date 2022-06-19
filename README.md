@@ -2,13 +2,13 @@
 
 React App that allows the user to track interesting music/video clips and to fetch songs lyrics.
 
-## Why this App
+## Why this App 🤔
 
 To learn to use React during the Futureproof Bootcamp - Auguste Cohort.
 
 ![image](assets/MuzicList.png)
 
-## How to use
+## How to use 💻
 
 The app has been deployed on Netlify at [this address](https://muzic-list.netlify.app/).
 
@@ -44,6 +44,6 @@ npm run coverage
 - Axios (to make fetch requests, smarter than fetch and isomorphic (can be used FE and BE))
 - UUID (npm package used to generate uuids, Universally Unique Identifiers)
 
-## Challenges
+## Challenges 😫
 
 - Testing (struggle to use mocks with Jest)
